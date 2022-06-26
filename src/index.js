@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import AppUI from './App';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import '@fontsource/eb-garamond/700.css'
+import '@fontsource/noto-sans-jp/400.css'
+
+const theme = extendTheme({
+  heading: `'Noto Sans JP', sans-serif`,
+  text: `'EB Garamond', serif`
+})
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider theme={theme}>
+      <AppUI />
+    </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+);

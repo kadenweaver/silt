@@ -1,5 +1,9 @@
-@import "pure-react-carousel/dist/react-carousel.es.css";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 
+.post-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+}
 .back-button-icon {
     margin-right: 10px;
     vertical-align: middle;
@@ -106,20 +110,41 @@
     max-height: 100vh;
     display: inline-block;
     position: fixed;
+    transform: translateX(0);
     
+}
+
+sidebar.closed {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 2%;
+    overflow: hidden;
+    transform: translateX(100);
+    transition: transform 0.3s ease-out;
+    z-index: 200;
 }
 
 .center-div {
     background-color: #4b5d7a;
-    margin-left: 20%;
     margin-top: none;
     width: 78%;
+    margin-left: auto;
+    margin-right: auto;
     min-height: 100vh;
     height: 100%;
    /* max-height: 100vh; */
-    display: inline-block;
     top: 0;
     overflow: auto;
+}
+
+.yt-container {
+    width: fit-content;
+    height: fit-content;
+    background-color: #fffef5;
+    padding-top: 3px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .image-container {
@@ -190,13 +215,33 @@
     margin-left: auto;
 }
 
+.sidebar-tab {
+    width: 100%;
+    height: 40px;
+    background-color: lightblue;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: none;
+    border: none;
+}
+
+.sidebar-tab:hover{
+    background-color: sandybrown;
+    color: white;
+}
+
+.sidebar-tab:focus {
+    background-color: #3c4759;
+    color: white;
+    font-weight: bold;
+}
 
 .App-link {
   color: #61dafb;
 }
 
 .App {
-    overflow: scroll;
+    overflow: hidden;
 }
 
 @keyframes App-logo-spin {
