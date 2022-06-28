@@ -1,16 +1,16 @@
-import { musicPostPreviewList } from './MusicPostContent'
+import { musicPostPreviewList } from "./MusicPostContent";
 import TabContainer from "../TabContainer";
 
-const MusicPostTable = (props) => {
-    const { onClickMusicPost } = props
+const MusicPostTable = props => {
+  const { onClickMusicPost } = props;
 
-    return (
-        <TabContainer 
-          tabTitle='Music'
-          postTabPreviewsList={musicPostPreviewList}
-          onPreviewClick={onClickMusicPost}
-        />
-    )
-}
+  return (
+    <TabContainer
+      tabTitle="Music"
+      postTabPreviewsList={musicPostPreviewList}
+      onPreviewClick={onClickMusicPost}
+    />
+  );
+};
 
 export default MusicPostTable;
