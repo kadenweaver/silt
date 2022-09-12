@@ -2,11 +2,13 @@ import apChels from '../../pictures/APChelsea.jpeg';
 import SuperCup from '../../pictures/SuperCup.jpeg';
 import FirstMatch from '../../pictures/FirstMatch.jpg';
 import Kai from '../../pictures/sadBoyKai.webp'
+import managers from '../../pictures/managers.png'
 
 export const soccerPreviewContentList =  [
-    { previewKey: 3,  previewTitle: 'Tough Bout with Real Madrid Brings End to Champions League Defense', previewImage: Kai, previewImageOffset: '10' },
-    { previewKey: 2,  previewTitle: 'The Blues Secure Season Opener Win Through Alonso, Pulisic, and Chalobah', previewImage: FirstMatch, previewImageOffset: '20' },
-    { previewKey: 1,  previewTitle: 'Chelsea Bests Resilient Villarreal To Win Season\'s First Silverware', previewImage: SuperCup, previewImageOffset: '0' },
+    { previewKey: 4, previewTitle: 'Chelsea Switch Managers and Hope for Better Days', previewImage: managers, previewImageOffset: '45', },
+    { previewKey: 3, previewTitle: 'Tough Bout with Real Madrid Brings End to Champions League Defense', previewImage: Kai, previewImageOffset: '10' },
+    { previewKey: 2, previewTitle: 'The Blues Secure Season Opener Win Through Alonso, Pulisic, and Chalobah', previewImage: FirstMatch, previewImageOffset: '20' },
+    { previewKey: 1, previewTitle: 'Chelsea Bests Resilient Villarreal To Win Season\'s First Silverware', previewImage: SuperCup, previewImageOffset: '0' },
     { previewKey: 0, previewTitle: 'Chelsea Are European Champs!', previewImage: apChels, previewImageOffset: '2' } 
 ]
 
@@ -61,5 +63,32 @@ export const soccerPostContentList =  [
             "Thanks to a sharp coach and world class players, Chelsea have felt like a top team this season, like the European champions we are. Next season will surely demand new players, namely some centerbacks and a left fullback, but it's a joy to watch the current Chelsea squad work their magic. If our new owners can keep our manager and some of the club's key players, I don't think anyone will forget when we took it to Real Madrid in their own stadium."
         ]
     },
+    { 
+        postTitle: 'Tuchel Gone and Potter In, Chelsea at a Glance', 
+        postDate: 'September 13, 2022', 
+        textHeader: 'Loss In Zagreb Sees Thomas Tuchel Dismissed, Potter Becomes Most Expensive Manager of All Time', 
+        postImage: managers, 
+        postText: 
+        [
+            "In terms of managers getting sacked, Thomas Tuchel's exit may qualify as one of the saddest in Chelsea history. And that's including when club legend Frank Lampard was fired just before him. Something about the mix of timing, his personality, and the expectations for not only him, but also his squad-- I think this is a rare case of Chelsea fans wanting to see a stumbling manager continue a little longer and try to reset the course.", 
+            "I don't want to write Tuchel's eulogy, since it's a little silly, and because the man could return for another stint in my book. But why not introduce a little humanity into football? I'll never forget seeing a compilation of a speech Tuchel gave after joining and, of course, some selective highlights from the players thereafter. In the video, he talks about chasing City and says something like 'we must hunt them like wolves'. Simpy put, that was just the amount of passion the man seemed to have for Chelsea, and it energized fans to the max.",
+            "To the manager that won us a number of trophies including the prized Champions League, thanks for everything and good luck. Hopefully we'll see you again!",
+            "They say that when one door closes, another opens, and through this metaphorical open door treads Graham Potter. The ex Brighton & Hove Albion man will be expected to conjure better performances from our entire squad, let alone his former player, Marc Cucurella. The Prem-ready coach has impressed year in and year out with Brighton, bringing along an impressive lineup of underrated talent. Welcome, Graham, and best of luck to you!"
+        ]
+    },
 
 ]
+
+/*
+{ 
+    postTitle: '', 
+    postDate: '', 
+    textHeader: '', 
+    postImage: , 
+    postText: 
+    [
+        "", 
+    ]
+},
+
+*/

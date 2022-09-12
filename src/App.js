@@ -11,6 +11,11 @@ import { soccerPreviewContentList } from "./components/soccer/SoccerPostContent"
 import MusicPostsMapped from "./components/music/MusicPostsMapped";
 import { musicPostPreviewList } from "./components/music/MusicPostContent";
 
+import MoviePostsMapped from "./components/movies/MoviePostsMapped";
+import MoviePostTable from "./components/movies/MoviePostTable";
+import { moviePostPreviewList } from "./components/movies/MoviePostContent"
+
+
 import BackButton from "./components/BackButton";
 import { MinNav } from "./components/MinNav";
 
@@ -31,7 +36,7 @@ const AppUI = () => {
     () => soccerPostsOpen.some(x => x === true),
     [soccerPostsOpen]
   );
-  console.log("isSoccerPostOpen ", isSoccerPostOpen);
+
   // music keys
   const NUM_MUS = musicPostPreviewList?.length;
   const [musicPostTableShow, setMusicPostTableShow] = useState(false);
@@ -44,10 +49,23 @@ const AppUI = () => {
     [musicPostsOpen]
   );
 
-  // closes all posts in music and soccer
+  // movie keys
+  const NUM_MOV = moviePostPreviewList?.length;
+  const [moviePostTableShow, setMoviePostTableShow] = useState(false);
+  const [moviePostsOpen, setMoviePostsOpen] = useState(
+    Array(NUM_SOCC).fill(false)
+  );
+
+  const isMoviePostOpen = useMemo(
+    () => moviePostsOpen.some(x => x === true),
+    [moviePostsOpen]
+  );
+
+  // closes all posts in music, soccer, and movies
   const closeAllPosts = () => {
     setSoccerPostsOpen(Array(NUM_SOCC).fill(false));
     setMusicPostsOpen(Array(NUM_MUS).fill(false));
+    setMoviePostsOpen(Array(NUM_MOV).fill(false));
   };
 
   const closeSoccerPostsTablesDrawer = () => {
@@ -56,6 +74,7 @@ const AppUI = () => {
     //close tables
     setSoccerPostTableShow(false);
     setMusicPostTableShow(false);
+    setMoviePostTableShow(false);
     setHomeTabShow(false);
 
     closeNavDrawer();
@@ -102,12 +121,24 @@ const AppUI = () => {
     setSoccerPostsOpen(flattenedArray);
   };
 
+  const onClickMoviePost = key => {
+    var flattenedArray = Array(NUM_MOV).fill(false);
+    flattenedArray[key] = true;
+    setMoviePostTableShow(false);
+    setMoviePostsOpen(flattenedArray);
+  }
+
+  const closeMoviePost = () => {
+    openMovieTable();
+  }
+
   const openSoccerTable = () => {
     window.scrollTo(0, 0);
     closeAllPosts();
     setHomeTabShow(false);
     setNavDrawerOpen(false);
     setMusicPostTableShow(false);
+    setMoviePostTableShow(false);
     setSoccerPostTableShow(true);
   };
 
@@ -117,16 +148,27 @@ const AppUI = () => {
     setHomeTabShow(false);
     setNavDrawerOpen(false);
     setSoccerPostTableShow(false);
+    setMoviePostTableShow(false);
     setMusicPostTableShow(true);
   };
+
+  const openMovieTable = () => {
+    window.scrollTo(0, 0);
+    closeAllPosts();
+    setHomeTabShow(false);
+    setNavDrawerOpen(false);
+    setSoccerPostTableShow(false);
+    setMusicPostTableShow(false);
+    setMoviePostTableShow(true);
+  }
 
   return (
     <div className="App">
       <div className="background-div">
-        {(isSoccerPostOpen || isMusicPostOpen) && (
+        {(isSoccerPostOpen || isMusicPostOpen || isMoviePostOpen) && (
           <BackButton
-            onClosePost={isSoccerPostOpen ? closeSoccerPost : closeMusicPost}
-            backNavPage={isSoccerPostOpen ? "Soccer" : "Music"}
+            onClosePost={isSoccerPostOpen ? closeSoccerPost : isMusicPostOpen ? closeMusicPost : closeMoviePost}
+            backNavPage={isSoccerPostOpen ? "Soccer" : isMusicPostOpen ? "Music" : "Movies"}
           />
         )}
 
@@ -140,8 +182,11 @@ const AppUI = () => {
           soccerPostTableShow={soccerPostTableShow}
           openMusicTable={openMusicTable}
           musicPostTableShow={musicPostTableShow}
+          openMovieTable={openMovieTable}
+          moviePostTableShow={moviePostTableShow}
           isSoccerPostOpen={isSoccerPostOpen}
           isMusicPostOpen={isMusicPostOpen}
+          isMoviePostOpen={isMoviePostOpen}
         />
 
         <chakra.div
@@ -160,9 +205,7 @@ const AppUI = () => {
             {homeTabShow && <TabContainer tabTitle={"Home"} />}
 
             {soccerPostTableShow && (
-              <SoccerPostTable
-                onClickSoccerPost={onClickSoccerPost}
-              ></SoccerPostTable>
+              <SoccerPostTable onClickSoccerPost={onClickSoccerPost} />
             )}
 
             <SoccerPostsMapped
@@ -171,13 +214,20 @@ const AppUI = () => {
             />
 
             {musicPostTableShow && (
-              <MusicPostTable
-                onClickMusicPost={onClickMusicPost}
-              ></MusicPostTable>
+              <MusicPostTable onClickMusicPost={onClickMusicPost} />
             )}
             <MusicPostsMapped
               musicPostsOpenLegend={musicPostsOpen}
               closeMusicPost={closeMusicPost}
+            />
+
+            {moviePostTableShow && (
+              <MoviePostTable onClickMoviePost={onClickMoviePost} />
+            )}
+
+            <MoviePostsMapped
+              moviePostsOpenLegend={moviePostsOpen}
+              closeMoviePost={closeMoviePost}
             />
           </Container>
         </chakra.div>
@@ -187,35 +237,3 @@ const AppUI = () => {
 };
 
 export default AppUI;
-
-/*
-                <NavDrawer 
-                    navDrawerOpen={navDrawerOpen}
-                    closeNavDrawer={closeNavDrawer}
-                    openHomeTab={openHomeTab}
-                    homeTabShow={homeTabShow}
-                    openSoccerTable={openSoccerTable}
-                    soccerPostTableShow={soccerPostTableShow}
-                    openMusicTable={openMusicTable}
-                    musicPostTableShow={musicPostTableShow}
-                />
-*/
-
-/*
-                <Button
-                    pos='fixed'
-                    backgroundColor='#3c4759'
-                    h='100vh'
-                    w='2%'
-                    disabled={navDrawerOpen}
-                    onClick={openNavDrawer}
-                    alignContent='center'
-                    verticalAlign='center'
-                    borderRadius='0'
-                    _hover={{
-                        backgroundColor: '#abbbcc',
-                        color: '#3c4759'
-                    }}>
-                    <Icon fontSize='32' mt='30%' as={BiChevronRight} />
-                </Button>
-*/

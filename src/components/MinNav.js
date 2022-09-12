@@ -29,7 +29,10 @@ export const MinNav = props => {
     openMusicTable,
     musicPostTableShow,
     isSoccerPostOpen,
-    isMusicPostOpen
+    isMusicPostOpen,
+    openMovieTable,
+    moviePostTableShow,
+    isMoviePostOpen
   } = props;
 
   return (
@@ -71,7 +74,11 @@ export const MinNav = props => {
             active={musicPostTableShow || isMusicPostOpen}
             icon={BiMusic}
           />
-          <DrawerButton buttonTitle="Movies" icon={BiCameraMovie} />
+          <DrawerButton 
+          buttonTitle="Movies" 
+          openTab={openMovieTable}
+          active={moviePostTableShow || isMoviePostOpen}
+          icon={BiCameraMovie} />
         </>
       )}
     </VStack>
