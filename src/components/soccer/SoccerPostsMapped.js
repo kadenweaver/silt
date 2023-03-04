@@ -1,28 +1,21 @@
 import React from "react";
+import { useParams } from 'react-router-dom'
 import SoccerPost from "./SoccerPost";
 import { soccerPostContentList } from "./SoccerPostContent";
 
-const SoccerPostsMapped = props => {
-  const { soccerPostsOpenLegend, closeSoccerPost } = props;
-
+const SoccerPostsMapped = () => {
+  const { id } = useParams();
+  const postObj = soccerPostContentList && soccerPostContentList.at(id);
+  const { postTitle, postDate, textHeader, postText, postImage } = postObj;
   return (
-    <>
-      {soccerPostContentList &&
-        soccerPostContentList.map(
-          (x, index) =>
-            soccerPostsOpenLegend[index] && (
-              <SoccerPost
-                onClosePost={closeSoccerPost}
-                postTitle={x.postTitle}
-                textHeader={x.textHeader}
-                postDate={x.postDate}
-                postImage={x.postImage}
-                postText={x.postText}
-                backNavPage="Soccer"
-              />
-            )
-        )}
-    </>
+    <SoccerPost
+      postTitle={postTitle}
+      textHeader={textHeader}
+      postDate={postDate}
+      postImage={postImage}
+      postText={postText}
+      backNavPage="Movies"
+    />
   );
 };
 

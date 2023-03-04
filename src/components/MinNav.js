@@ -1,5 +1,7 @@
-import { VStack, IconButton, Icon } from "@chakra-ui/react";
+import { VStack, IconButton, Icon, Link as ChakraLink } from "@chakra-ui/react";
+import { Link, useLocation } from "react-router-dom";
 import { BiMusic, BiHomeAlt, BiFootball, BiCameraMovie } from "react-icons/bi";
+import { BsController } from "react-icons/bs";
 
 import { DrawerButton } from "./DrawerButton";
 
@@ -22,18 +24,22 @@ export const MinNav = props => {
     navDrawerOpen,
     closeNavDrawer,
     openNavDrawer,
-    openHomeTab,
-    homeTabShow,
-    openSoccerTable,
-    soccerPostTableShow,
-    openMusicTable,
-    musicPostTableShow,
-    isSoccerPostOpen,
-    isMusicPostOpen,
-    openMovieTable,
-    moviePostTableShow,
-    isMoviePostOpen
   } = props;
+  const location = useLocation();
+
+  const path = location?.pathname;
+  const pathList = ["/", "/soccer", "/music", "/movies", "/games"];
+  const buttonTitles = ["Home", "Soccer", "Music", "Movies", "Games"];
+  const pathIcons = [
+    BiHomeAlt,
+    BiFootball,
+    BiMusic,
+    BiCameraMovie,
+    BsController,
+  ];
+  console.log(path)
+  console.log(pathList)
+  const activeIndex = path && pathList.findIndex(x => x === path);
 
   return (
     <VStack
@@ -48,37 +54,22 @@ export const MinNav = props => {
     >
       {!navDrawerOpen && (
         <>
-          <MiniButton icon={BiHomeAlt} active={homeTabShow} />
-          <MiniButton icon={BiFootball} active={soccerPostTableShow || isSoccerPostOpen} />
-          <MiniButton icon={BiMusic} active={musicPostTableShow || isMusicPostOpen} />
-          <MiniButton icon={BiCameraMovie} />
+          {pathIcons.map((icon, index) => 
+            <MiniButton icon={icon} active={index === activeIndex} />
+          )}
         </>
       )}
       {navDrawerOpen && (
         <>
-          <DrawerButton
-            buttonTitle="Home"
-            openTab={openHomeTab}
-            active={homeTabShow}
-            icon={BiHomeAlt}
-          />
-          <DrawerButton
-            buttonTitle="Soccer"
-            openTab={openSoccerTable}
-            active={soccerPostTableShow || isSoccerPostOpen}
-            icon={BiFootball}
-          />
-          <DrawerButton
-            buttonTitle="Music"
-            openTab={openMusicTable}
-            active={musicPostTableShow || isMusicPostOpen}
-            icon={BiMusic}
-          />
-          <DrawerButton 
-          buttonTitle="Movies" 
-          openTab={openMovieTable}
-          active={moviePostTableShow || isMoviePostOpen}
-          icon={BiCameraMovie} />
+          {pathList.map((path, index) => (
+            <ChakraLink as={Link} to={path} w="100%">
+              <DrawerButton
+                buttonTitle={buttonTitles.at(index)}
+                active={index === activeIndex}
+                icon={pathIcons.at(index)}
+              />
+            </ChakraLink>
+          ))}
         </>
       )}
     </VStack>

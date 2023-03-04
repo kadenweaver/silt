@@ -1,21 +1,24 @@
 import React from "react";
-import { Image, Flex, Text } from "@chakra-ui/react";
+import { Link } from 'react-router-dom'
+import { Image, Flex, Text, Link as ChakraLink } from "@chakra-ui/react";
 
 const PostPreview = props => {
   const {
+    postType,
     previewImage,
     previewTitle,
     previewImageOffset,
     previewKey,
-    onPreviewClick,
   } = props;
+
   return (
+    <ChakraLink as={Link} to={`${postType}/${previewKey}`}>
+
     <Flex
       w="100%"
       h="90px"
       borderRadius="5px"
       flexDir="row"
-      onClick={() => onPreviewClick(previewKey)}
       border="2px solid #3c4759"
       mb="6px"
       textAlign="center"
@@ -45,10 +48,12 @@ const PostPreview = props => {
         alignSelf="center"
         ml="auto"
         mr="auto"
+        maxWidth='45%'
       >
         {previewTitle}
       </Text>
     </Flex>
+    </ChakraLink>
   );
 };
 

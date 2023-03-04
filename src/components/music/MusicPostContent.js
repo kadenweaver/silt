@@ -10,24 +10,32 @@ import digitalBay from "../../pictures/digitalBay.webp";
 
 export const musicPostPreviewList = [
   {
+    postType: 'music',
+    postDate: "Jun 26, 2022",
     previewKey: 8,
     previewTitle: "Magdalena Bay is on Fire",
     previewImage: digitalBay,
     previewImageOffset: "0",
   },
   {
+    postType: 'music',
+    postDate: "Jun 16, 2022",
     previewKey: 7,
     previewTitle: "She is Beauty, She is Grace",
     previewImage: grace,
     previewImageOffset: "40",
   },
   {
+    postType: 'music',
+    postDate: "Jan 29, 2022",
     previewKey: 6,
     previewTitle: "Saggi Moon, Pisce Veen, Capri Sun",
     previewImage: capriSongs,
     previewImageOffset: "20",
   },
   {
+    postType: 'music',
+    postDate: "Aug 30, 2021",
     previewKey: 5,
     previewTitle:
       "Caroline Polachek Follows Freshman Album With Exciting Single",
@@ -35,6 +43,8 @@ export const musicPostPreviewList = [
     previewImageOffset: "0",
   },
   {
+    postType: 'music',
+    postDate: "Aug 23, 2021",
     previewKey: 4,
     previewTitle:
       "Lorde Releases New Album Including Contender For Song Of The Summer",
@@ -42,24 +52,32 @@ export const musicPostPreviewList = [
     previewImageOffset: "10",
   },
   {
+    postType: 'music',
+    postDate: "Aug 21, 2021",
     previewKey: 3,
     previewTitle: "John Glacier: Hopefully This Counts As A Snipe",
     previewImage: glacier,
     previewImageOffset: "0",
   },
   {
+    postType: 'music',
+    postDate: "Aug 20, 2021",
     previewKey: 2,
     previewTitle: "Vince Staple's Self-Titled Album Is His Best Yet By Far",
     previewImage: vinceStaples,
     previewImageOffset: "10",
   },
   {
+    postType: 'music',
+    postDate: "Jun 24, 2021",
     previewKey: 1,
     previewTitle: "I Have No Idea Who Cartier God Is But...",
     previewImage: cartier,
     previewImageOffset: "75",
   },
   {
+    postType: 'music',
+    postDate: "Jun 23, 2021",
     previewKey: 0,
     previewTitle: "This Perfume Genius Remix Made A Good Song Better",
     previewImage: perfume,
@@ -69,17 +87,19 @@ export const musicPostPreviewList = [
 
 export const musicPostContentList = [
   {
+    postType: 'music',
     postTitle:
       'Groove Out: Jim E Stack Remixes Perfume Genius\'s "Without You" To Funk EDM Perfection',
-    postDate: "June 23, 2021",
+    postDate: "Jun 23, 2021",
     playerLink: "https://open.spotify.com/embed/track/0WOsGA4a7Rio2t0osKmYVa",
     postText: [
       'I\'ve been getting into Perfume Genius more after seeing his album, Set My Heart on Fire Immediately, get such high ratings last year. Many of the tracks from the original album are lively and intricately woven, my favorite being "On The Floor". Two of the better tracks off the ensuing remix album are A.G. Cook\'s light, static take on "Describe", and this bouncy rhythm switch for "Without You".',
     ],
   },
   {
+    postType: 'music',
     postTitle: "Cartier God and Bladee: Who Invented Volume Throttling?",
-    postDate: "June 23, 2021",
+    postDate: "Jun 24, 2021",
     playerLink:
       "https://open.spotify.com/embed/track/7tlu2KkAfOaCZMpDEQ8Npy?si=Qnjv-zJ6TY-gCMiQFzzBYg",
     postText: [
@@ -87,9 +107,10 @@ export const musicPostContentList = [
     ],
   },
   {
+    postType: 'music',
     postTitle:
       "Staples Released An Album Of Mellow Sampled Raps, Finally Living Up To His Potential",
-    postDate: "August 20, 2021",
+    postDate: "Aug 20, 2021",
     playerLink:
       "https://open.spotify.com/embed/playlist/2gymXGRl1CLdN1mAdyZtIE?si=lbiG8wJ3TAuGskheN2jQng&dl",
     postText: [
@@ -99,8 +120,9 @@ export const musicPostContentList = [
     ],
   },
   {
+    postType: 'music',
     postTitle: "Up And Coming John Glacier Makes Bedroom Hop",
-    postDate: "August 20, 2021",
+    postDate: "Aug 21, 2021",
     playerLink:
       "https://open.spotify.com/embed/track/5TaJDVZLSreKLg31wRR284?si=U0ccOg31S0CHxJNK4jF2yQ&dl",
     postText: [
@@ -108,8 +130,9 @@ export const musicPostContentList = [
     ],
   },
   {
+    postType: 'music',
     postTitle: "Lorde's Airy Pop Hits Hard At Times",
-    postDate: "August 23, 2021",
+    postDate: "Aug 23, 2021",
     playerLink:
       "https://open.spotify.com/embed/track/6FE9EXi8TYg09hR4xv5PWJ?si=e1s1vt2zTcmM0Hj9_Gn36g&dl",
     postText: [
@@ -117,8 +140,9 @@ export const musicPostContentList = [
     ],
   },
   {
+    postType: 'music',
     postTitle: "Polachek Releases Baby Sound Single With Accompanying Video",
-    postDate: "August 30, 2021",
+    postDate: "Aug 30, 2021",
     playerLink:
       "https://open.spotify.com/embed/track/1rYABrDmfqVmJMwaNJBUUb?si=A9_0SzkpRoujJzQnXfRr2g&dl",
     postText: [
@@ -127,9 +151,10 @@ export const musicPostContentList = [
     postBonusVideo: "https://www.youtube.com/embed/h_V2ccs_Urk",
   },
   {
+    postType: 'music',
     postTitle:
       "Twigs Makes a Mixtape That Sparkles Without Reinventing Much of Anything",
-    postDate: "January 29, 2022",
+    postDate: "Jan 29, 2022",
     playerLink:
       "https://open.spotify.com/embed/track/6EeuY84I1Q3UJvpPN6iSzw?utm_source=generator",
     postText: [
@@ -137,8 +162,9 @@ export const musicPostContentList = [
     ],
   },
   {
+    postType: 'music',
     postTitle: "Ives Packs an Album Full of Unabashedly Unique Pop",
-    postDate: "June 16, 2022",
+    postDate: "Jun 16, 2022",
     playerLink:
       "https://open.spotify.com/embed/playlist/0Xr8FKd7WGtUcZqdwMRgpz?utm_source=generator&theme=0",
     postText: [
@@ -150,8 +176,9 @@ export const musicPostContentList = [
     postBonusVideo: "https://www.youtube.com/embed/Bu4FuCWZiB4",
   },
   {
+    postType: 'music',
     postTitle: "Duo Mica and Matthew Synthesize New Age Pop",
-    postDate: "June 26, 2022",
+    postDate: "Jun 26, 2022",
     playerLink:
       "https://open.spotify.com/embed/track/3tgHGoK5ItQv2q2yqggxlb?utm_source=generator",
     postText: [
@@ -165,17 +192,18 @@ export const musicPostContentList = [
 ];
 /*
 {
-    postTitle: '',
-    postDate: '',
-    playerLink: '',
-    postText: 
-    [
-        "",
-        "",
-        "",
-        ""
-    ],
-    postBonusVideo: ''
+  postType: 'music',
+  postTitle: '',
+  postDate: '',
+  playerLink: '',
+  postText: 
+  [
+      "",
+      "",
+      "",
+      ""
+  ],
+  postBonusVideo: ''
 
 },
 

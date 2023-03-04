@@ -1,27 +1,20 @@
 import React from "react";
+import { useParams } from 'react-router-dom'
 import MoviePost from "./MoviePost";
 import { moviePostContentList } from "./MoviePostContent";
 
-const MoviePostsMapped = props => {
-  const { moviePostsOpenLegend, closeMoviePost } = props;
-
+const MoviePostsMapped = () => {
+  const { id } = useParams();
+  const postObj = moviePostContentList && moviePostContentList.at(id);
+  const { postTitle, postDate, postImage, postText } = postObj;
   return (
-    <>
-      {moviePostContentList &&
-        moviePostContentList.map(
-          (x, index) =>
-            moviePostsOpenLegend[index] && (
-              <MoviePost
-                onClosePost={closeMoviePost}
-                postTitle={x.postTitle}
-                postDate={x.postDate}
-                postText={x.postText}
-                postImage={x.postImage}
-                backNavPage="Movie"
-              />
-            )
-        )}
-    </>
+    <MoviePost
+      postTitle={postTitle}
+      postDate={postDate}
+      postImage={postImage}
+      postText={postText}
+      backNavPage="Movies" />
+
   );
 };
 

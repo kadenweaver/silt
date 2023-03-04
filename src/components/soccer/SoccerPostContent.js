@@ -3,17 +3,20 @@ import SuperCup from '../../pictures/SuperCup.jpeg';
 import FirstMatch from '../../pictures/FirstMatch.jpg';
 import Kai from '../../pictures/sadBoyKai.webp'
 import managers from '../../pictures/managers.png'
+import graham from '../../pictures/chelseaGrahamPotter.jpeg'
 
 export const soccerPreviewContentList =  [
-    { previewKey: 4, previewTitle: 'Chelsea Switch Managers and Hope for Better Days', previewImage: managers, previewImageOffset: '45', },
-    { previewKey: 3, previewTitle: 'Tough Bout with Real Madrid Brings End to Champions League Defense', previewImage: Kai, previewImageOffset: '10' },
-    { previewKey: 2, previewTitle: 'The Blues Secure Season Opener Win Through Alonso, Pulisic, and Chalobah', previewImage: FirstMatch, previewImageOffset: '20' },
-    { previewKey: 1, previewTitle: 'Chelsea Bests Resilient Villarreal To Win Season\'s First Silverware', previewImage: SuperCup, previewImageOffset: '0' },
-    { previewKey: 0, previewTitle: 'Chelsea Are European Champs!', previewImage: apChels, previewImageOffset: '2' } 
+    { previewKey: 5, previewTitle: 'Potter In Desperate Need of a Turnaround', previewImage: graham, previewImageOffset: '15', postType: 'soccer', postDate: 'Mar 01, 2023' },
+    { previewKey: 4, previewTitle: 'Chelsea Switch Managers and Hope for Better Days', previewImage: managers, previewImageOffset: '45', postType: 'soccer', postDate: 'Sep 13, 2022' },
+    { previewKey: 3, previewTitle: 'Tough Bout with Real Madrid Brings End to Champions League Defense', previewImage: Kai, previewImageOffset: '10', postType: 'soccer', postDate: 'Apr 13, 2022' },
+    { previewKey: 2, previewTitle: 'The Blues Secure Season Opener Win Through Alonso, Pulisic, and Chalobah', previewImage: FirstMatch, previewImageOffset: '20', postType: 'soccer', postDate: 'Aug 18, 2021' },
+    { previewKey: 1, previewTitle: 'Chelsea Bests Resilient Villarreal To Win Season\'s First Silverware', previewImage: SuperCup, previewImageOffset: '0', postType: 'soccer', postDate: 'Aug 17, 2021' },
+    { previewKey: 0, previewTitle: 'Chelsea Are European Champs!', previewImage: apChels, previewImageOffset: '2', postDate: 'May 31, 2021'} 
 ]
 
 export const soccerPostContentList =  [
     { 
+        postType: 'soccer', 
         postTitle: 'Chelsea Are Champions Of Europe', 
         postDate: 'May 31, 2021', 
         textHeader: 'The Blues write a new chapter in their legacy as European giants, meeting expectations based on massive summer signings', 
@@ -26,6 +29,7 @@ export const soccerPostContentList =  [
         ]
     },
     { 
+        postType: 'soccer', 
         postTitle: 'Chelsea Are Super Champions Of Europe', 
         postDate: 'Aug 17, 2021', 
         textHeader: 'Tuchel\'s Men Edged Past The EL Champions 6-5 On Penalties, Though The Side Appeared Polished And In Control', 
@@ -38,8 +42,9 @@ export const soccerPostContentList =  [
         ]
     },
     { 
+        postType: 'soccer',
         postTitle: 'Chelsea Shine In Opening Day Win', 
-        postDate: 'August 18, 2021', 
+        postDate: 'Aug 18, 2021', 
         textHeader: 'Chelsea Took No Prisoners Against Palace, Scoring Two Before Half And Sealing The Win With A Third Soon After The Break', 
         postImage: FirstMatch, 
         postText: 
@@ -50,8 +55,9 @@ export const soccerPostContentList =  [
         ]
     },
     { 
+        postType: 'soccer',
         postTitle: 'Chelsea Comback Thwarted In Late Stages By Clinical Madrid', 
-        postDate: 'April 13, 2022', 
+        postDate: 'Apr 13, 2022', 
         textHeader: 'Despite An Incredible Second Leg Victory, Chelsea CL Campaign Ended By Madrid Goal In Extra Time', 
         postImage: Kai, 
         postText: 
@@ -64,8 +70,9 @@ export const soccerPostContentList =  [
         ]
     },
     { 
+        postType: 'soccer',
         postTitle: 'Tuchel Gone and Potter In, Chelsea at a Glance', 
-        postDate: 'September 13, 2022', 
+        postDate: 'Sep 13, 2022', 
         textHeader: 'Loss In Zagreb Sees Thomas Tuchel Dismissed, Potter Becomes Most Expensive Manager of All Time', 
         postImage: managers, 
         postText: 
@@ -76,11 +83,28 @@ export const soccerPostContentList =  [
             "They say that when one door closes, another opens, and through this metaphorical open door treads Graham Potter. The ex Brighton & Hove Albion man will be expected to conjure better performances from our entire squad, let alone his former player, Marc Cucurella. The Prem-ready coach has impressed year in and year out with Brighton, bringing along an impressive lineup of underrated talent. Welcome, Graham, and best of luck to you!"
         ]
     },
+    { 
+        postType: 'soccer',
+        postTitle: 'Potter Struggling to Find Roots at Chelsea', 
+        postDate: 'Mar 01, 2023', 
+        textHeader: 'Most Expensive Manager of All Time Produces Very Few Results', 
+        postImage: graham, 
+        postText: 
+        [
+            "When Potter joined Chelsea, the move was a shock to Chelea fans to be sure, but also seemed to cause a ripple or two in the rest of the soccer world. How did the manager of an overperforming premier league team, a man whose coaching career started at university and then Östersund in Sweden, suddenly become the most expensive coach of all time. And what was it about Potter that gained him the confidence of new Chelsea owner, Todd Boehly? Or more importantly, what made the American so confident in him that it deemed replacing Tuchel?", 
+            "At first, though saddened to see such a nice fellow go so quickly, the Chelsea fanbase seemed ready to embrace a new manager in charge. Potter's ninth place finish with Brighton the season before was apparently enough (I'll admit, I thought his seasons with Brighton were more consisent). After all, if Potter could squeeze the most out of Pascal Groß and Leandro Trossard, it seemed logical he would make a Caiceido or two at Chelsea.", 
+            "In addition to the new manager came new players. Though Boehly's time as a quasi director of football seemed haphazardly guided at best, he brought in quality enough reinforcements through his first two transfer windows. Instead of trying to make a point about throwing darts at a board, I'll just list the major Boehly transfers so far.",
+            "IN: Sterling, Koulibaly, Cucurella, Wesley Fofana, Zakaria, Aubameyang, David Fofana, Badiashille, Santos, Félix, Mudryk, Madueke, Gusto, Enzo",
+            "OUT: Jorginho, Gilmour, Kenedy, Emerson, Werner",
+            "Though Chelsea's recent transfer business has caused an almost complete refresh of the team, just the players brought in should constitute a very competitive side. Instead, the form of the team is at an extreme nadir. With just 3 wins in the past 16 matches, the last good memory Chelsea fans have is bossing AC Milan in both legs of the CL group stage to reserve our place in the round of 16. Since then, Potter has done little to justify his fee, and the Englishman will hope for a huge upturn in form from his players to reignite the season."
+        ]
+    },
 
 ]
 
 /*
 { 
+    postType: 'soccer',
     postTitle: '', 
     postDate: '', 
     textHeader: '', 

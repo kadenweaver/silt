@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Icon } from "@chakra-ui/react";
 
 export const DrawerButton = props => {
-  const { buttonTitle, openTab, active, icon } = props;
+  const { buttonTitle, active, icon } = props;
 
   const buttonInactiveBG = "#a3b9cc";
   const buttonInactiveTextColor = "#3c4759";
@@ -13,7 +13,6 @@ export const DrawerButton = props => {
 
   return (
     <Button
-      onClick={openTab}
       w="100%"
       backgroundColor={active ? buttonActiveBG : buttonInactiveBG}
       color={active ? buttonActiveTextColor : buttonInactiveTextColor}

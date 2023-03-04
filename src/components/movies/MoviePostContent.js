@@ -3,6 +3,8 @@ import ghost from "../../pictures/ghost.jpeg";
 
 export const moviePostPreviewList = [
   {
+    postType: 'movies',
+    postDate: "Sep 12, 2022",
     previewKey: 0,
     previewTitle: "Ghost in the Shell",
     previewImage: ghost,
@@ -12,9 +14,10 @@ export const moviePostPreviewList = [
 
 export const moviePostContentList = [
   {
+    postType: 'movies',
     postTitle:
       'Ghost in the Shell',
-    postDate: "September 12, 2022",
+    postDate: "Sep 12, 2022",
     postText: [
       '',
     ],
@@ -23,6 +26,7 @@ export const moviePostContentList = [
 ];
 /*
 {
+    postType: 'movie',
     postTitle: '',
     postDate: '',
     postText: 

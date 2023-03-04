@@ -1,28 +1,21 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import MusicPost from "./MusicPost";
 import { musicPostContentList } from "./MusicPostContent";
 
-const MusicPostsMapped = props => {
-  const { musicPostsOpenLegend, closeMusicPost } = props;
-
+const MusicPostsMapped = () => {
+  const { id } = useParams();
+  const postObj = musicPostContentList && musicPostContentList.at(id);
+  const { postTitle, postDate, playerLink, postText, postBonusVideo } = postObj;
   return (
-    <>
-      {musicPostContentList &&
-        musicPostContentList.map(
-          (x, index) =>
-            musicPostsOpenLegend[index] && (
-              <MusicPost
-                onClosePost={closeMusicPost}
-                postTitle={x.postTitle}
-                postDate={x.postDate}
-                playerLink={x.playerLink}
-                postText={x.postText}
-                postBonusVideo={x.postBonusVideo}
-                backNavPage="Music"
-              />
-            )
-        )}
-    </>
+    <MusicPost
+      postTitle={postTitle}
+      postDate={postDate}
+      playerLink={playerLink}
+      postText={postText}
+      postBonusVideo={postBonusVideo}
+      backNavPage="Movies"
+    />
   );
 };
 
