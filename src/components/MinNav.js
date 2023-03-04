@@ -1,5 +1,5 @@
 import { VStack, IconButton, Icon, Link as ChakraLink } from "@chakra-ui/react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useRouteMatch } from "react-router-dom";
 import { BiMusic, BiHomeAlt, BiFootball, BiCameraMovie } from "react-icons/bi";
 import { BsController } from "react-icons/bs";
 
@@ -26,6 +26,7 @@ export const MinNav = props => {
     openNavDrawer,
   } = props;
   const location = useLocation();
+  const match = useRouteMatch()
 
   const path = location?.pathname;
   const pathList = ["/", "/soccer", "/music", "/movies", "/games"];
@@ -37,8 +38,7 @@ export const MinNav = props => {
     BiCameraMovie,
     BsController,
   ];
-  console.log(path)
-  console.log(pathList)
+
   const activeIndex = path && pathList.findIndex(x => x === path);
 
   return (
@@ -62,7 +62,7 @@ export const MinNav = props => {
       {navDrawerOpen && (
         <>
           {pathList.map((path, index) => (
-            <ChakraLink as={Link} to={path} w="100%">
+            <ChakraLink as={Link} to={{pathname: path, state: {prevPath: match}}} w="100%">
               <DrawerButton
                 buttonTitle={buttonTitles.at(index)}
                 active={index === activeIndex}

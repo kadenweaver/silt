@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link, useRouteMatch } from 'react-router-dom'
 import { Image, Flex, Text, Link as ChakraLink } from "@chakra-ui/react";
 
 const PostPreview = props => {
@@ -10,9 +10,9 @@ const PostPreview = props => {
     previewImageOffset,
     previewKey,
   } = props;
-
+  const match = useRouteMatch()
   return (
-    <ChakraLink as={Link} to={`${postType}/${previewKey}`}>
+    <ChakraLink as={Link} to={{pathname: `${postType}/${previewKey}`, state: {prevPath: match} }}>
 
     <Flex
       w="100%"

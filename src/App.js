@@ -190,8 +190,6 @@ const AppUI = () => {
     setGamesPostTableShow(true);
   };
 
-  const displayBackButton = false
-
   const closePost = isHomePostOpen
     ? closeHomePost
     : isSoccerPostOpen
@@ -216,12 +214,11 @@ const AppUI = () => {
     <Router>
       <div className="App">
         <div className="background-div">
-          {displayBackButton && (
+
             <BackButton
               onClosePost={closePost}
-              backNavPage={backButtonPageText}
-            />
-          )}
+              backNavPage={backButtonPageText} />
+
 
           <MinNav
             openNavDrawer={openNavDrawer}
