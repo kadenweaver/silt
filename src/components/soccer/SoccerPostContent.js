@@ -11,7 +11,7 @@ export const soccerPreviewContentList =  [
     { previewKey: 3, previewTitle: 'Tough Bout with Real Madrid Brings End to Champions League Defense', previewImage: Kai, previewImageOffset: '10', postType: 'soccer', postDate: 'Apr 13, 2022' },
     { previewKey: 2, previewTitle: 'The Blues Secure Season Opener Win Through Alonso, Pulisic, and Chalobah', previewImage: FirstMatch, previewImageOffset: '20', postType: 'soccer', postDate: 'Aug 18, 2021' },
     { previewKey: 1, previewTitle: 'Chelsea Bests Resilient Villarreal To Win Season\'s First Silverware', previewImage: SuperCup, previewImageOffset: '0', postType: 'soccer', postDate: 'Aug 17, 2021' },
-    { previewKey: 0, previewTitle: 'Chelsea Are European Champs!', previewImage: apChels, previewImageOffset: '2', postDate: 'May 31, 2021'} 
+    { previewKey: 0, previewTitle: 'Chelsea Are European Champs!', previewImage: apChels, previewImageOffset: '2', postType: 'soccer', postDate: 'May 31, 2021'} 
 ]
 
 export const soccerPostContentList =  [

@@ -29,7 +29,9 @@ export const MinNav = props => {
   const match = useRouteMatch()
 
   const path = location?.pathname;
-  const pathList = ["/", "/soccer", "/music", "/movies", "/games"];
+  console.log(path.split('/'))
+  const pathSplit = path.split('/').at(1)
+  const pathList = ["", "soccer", "music", "movies", "games"];
   const buttonTitles = ["Home", "Soccer", "Music", "Movies", "Games"];
   const pathIcons = [
     BiHomeAlt,
@@ -39,8 +41,7 @@ export const MinNav = props => {
     BsController,
   ];
 
-  const activeIndex = path && pathList.findIndex(x => x === path);
-
+  const activeIndex = path && pathList.findIndex(x => x === pathSplit);
   return (
     <VStack
       w={navDrawerOpen ? "12%" : "4%"}
@@ -62,7 +63,7 @@ export const MinNav = props => {
       {navDrawerOpen && (
         <>
           {pathList.map((path, index) => (
-            <ChakraLink as={Link} to={{pathname: path, state: {prevPath: match}}} w="100%">
+            <ChakraLink as={Link} to={{pathname: `/${path}`, state: {prevPath: match}}} w="100%">
               <DrawerButton
                 buttonTitle={buttonTitles.at(index)}
                 active={index === activeIndex}
