@@ -1,14 +1,9 @@
 import "./App.css";
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import SoccerPostTable from "./components/soccer/SoccerPostTable";
-import MusicPostTable from "./components/music/MusicPostTable";
 import { Container, chakra } from "@chakra-ui/react";
 
-import HomePostsTable from "./components/home/HomePostTable";
-import MoviePostTable from "./components/movies/MoviePostTable";
-import GamesPostTable from "./components/games/GamesPostTable";
-
+import PostTable from './components/PostTable'
 import BackButton from "./components/BackButton";
 import { MinNav } from "./components/MinNav";
 
@@ -48,20 +43,11 @@ const AppUI = () => {
           >
             <Container width="100%" mr="auto" ml="auto" mb="13vh">
               <Switch>
-                <Route path="/soccer">
-                  <SoccerPostTable />
+                <Route path={"/:page"}>
+                  <PostTable />
                 </Route>
-                <Route path="/music">
-                  <MusicPostTable />
-                </Route>
-                <Route path="/movies">
-                  <MoviePostTable />
-                </Route>
-                <Route path="/games">
-                  <GamesPostTable />
-                </Route>
-                <Route path="/">
-                  <HomePostsTable />
+                <Route path='/'>
+                  <PostTable />
                 </Route>
               </Switch>
             </Container>

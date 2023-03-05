@@ -8,10 +8,11 @@ const BackButton = () => {
   const location = useLocation()
   const path = location?.pathname
   const id = path?.split('/')?.slice(1)?.at(1)
-  const prev = location?.state?.prevPath?.pathname || location?.state?.prevPath?.path
-  console.log(location)
+
+  const prev = location?.state?.prevPath
+  const backDefined = prev && typeof prev === 'string'
   const pathList = ['soccer', 'music', 'movies', 'games']
-  const pathIndex = prev && pathList.findIndex(x => prev.includes(x))
+  const pathIndex = backDefined && pathList.findIndex(x => prev.includes(x))
   const label = pathIndex !== undefined && pathIndex >= 0 ? pathList.at(pathIndex).charAt(0).toUpperCase() + pathList.at(pathIndex).slice(1) : 'Home'
 
   return (

@@ -12,7 +12,7 @@ const PostPreview = props => {
   } = props;
   const match = useRouteMatch()
   return (
-    <ChakraLink as={Link} to={{pathname: `${postType}/${previewKey}`, state: {prevPath: match} }}>
+    <ChakraLink as={Link} to={{pathname: `${postType}/${previewKey}`, state: {prevPath: match.url} }}>
 
     <Flex
       w="100%"
