@@ -29,7 +29,6 @@ export const MinNav = props => {
   const match = useRouteMatch()
 
   const path = location?.pathname;
-  console.log(path.split('/'))
   const pathSplit = path.split('/').at(1)
   const pathList = ["", "soccer", "music", "movies", "games"];
   const buttonTitles = ["Home", "Soccer", "Music", "Movies", "Games"];

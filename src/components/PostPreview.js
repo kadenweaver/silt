@@ -35,7 +35,8 @@ const PostPreview = props => {
       <Image
         src={previewImage}
         maxHeight="inherit"
-        minWidth="50%"
+        w="50%"
+        maxWidth="50%"
         fit="cover"
         borderRadius="0"
         objectPosition={
@@ -43,12 +44,13 @@ const PostPreview = props => {
         }
       />
       <Text
-        fontSize="18px"
+        fontSize='0.8em'
         fontWeight="bold"
         alignSelf="center"
         ml="auto"
         mr="auto"
         maxWidth='45%'
+        noOfLines={3}
       >
         {previewTitle}
       </Text>
