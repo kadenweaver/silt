@@ -1,8 +1,12 @@
+import { useEffect } from 'react'
 import PostPreview from "./PostPreview";
 import { Heading } from "@chakra-ui/react";
 
 const NewTabContainer = props => {
   const { tabTitle, postTabPreviewsList } = props;
+  useEffect(() => {
+    window.scrollTo(0,0)
+}, [])
   return (
     <>
       <Heading

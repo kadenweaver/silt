@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useMemo } from "react";
 import { useRouteMatch, useParams, Switch, Route } from "react-router-dom";
 import NewTabContainer from "./NewTabContainer";
 import PostsMapped from "./PostsMapped";
@@ -22,10 +22,6 @@ const PostTable = () => {
         : homePostPreviewList.filter(x => x.postType === type),
     [type]
   );
-
-  useEffect(() => {
-      window.scrollTo(0, 0)
-  }, [page])
 
   return (
     <Switch>

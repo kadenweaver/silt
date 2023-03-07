@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import GamesPost from "./games/GamesPost";
 import MoviePost from "./movies/MoviePost";
@@ -24,6 +24,10 @@ const PostsMapped = props => {
     postBonusVideo,
     playerLink,
   } = postObj;
+
+  useEffect(() => {
+      window.scrollTo(0,0)
+  }, [])
   return type === "games" ? (
     <GamesPost
       postTitle={postTitle}
