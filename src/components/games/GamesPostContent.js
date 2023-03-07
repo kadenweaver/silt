@@ -1,7 +1,7 @@
-import tunic from '../../pictures/tunic.jpeg';
+import tunic from '../../pictures/tunic.png';
 import tunicPreview from '../../pictures/tunicPreviewArt.png'
 import chicoryMain from '../../pictures/chicoryMain.png';
-import chicoryPreview from '../../pictures/chicoryPreview.jpeg'
+import chicoryPreview from '../../pictures/chicoryPreview.png'
 
 
 export const gamesPostPreviewList =  [

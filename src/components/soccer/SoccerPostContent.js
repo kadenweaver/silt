@@ -1,9 +1,9 @@
-import apChels from '../../pictures/APChelsea.jpeg';
-import SuperCup from '../../pictures/SuperCup.jpeg';
-import FirstMatch from '../../pictures/FirstMatch.jpg';
-import Kai from '../../pictures/sadBoyKai.webp'
+import apChels from '../../pictures/APChelsea.png';
+import SuperCup from '../../pictures/SuperCup.png';
+import FirstMatch from '../../pictures/FirstMatch.png';
+import Kai from '../../pictures/sadBoyKai.png'
 import managers from '../../pictures/managers.png'
-import graham from '../../pictures/chelseaGrahamPotter.jpeg'
+import graham from '../../pictures/chelseaGrahamPotter.png'
 
 export const soccerPreviewContentList =  [
     { previewKey: 5, previewTitle: 'Potter In Desperate Need of a Turnaround', previewImage: graham, previewImageOffset: '15', postType: 'soccer', postDate: 'Mar 01, 2023' },

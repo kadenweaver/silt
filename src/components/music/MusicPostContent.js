@@ -1,12 +1,12 @@
-import perfume from "../../pictures/jasonundressed.jpeg";
-import cartier from "../../pictures/cartierGod.jpg";
-import vinceStaples from "../../pictures/vinceStaples.jpeg";
-import glacier from "../../pictures/Glacier.jpeg";
-import lorde from "../../pictures/lorde.jpeg";
-import bunny from "../../pictures/bunny.jpeg";
-import capriSongs from "../../pictures/capriSongs.jpeg";
+import perfume from "../../pictures/jasonundressed.png";
+import cartier from "../../pictures/cartierGod.png";
+import vinceStaples from "../../pictures/vinceStaples.png";
+import glacier from "../../pictures/Glacier.png";
+import lorde from "../../pictures/lorde.png";
+import bunny from "../../pictures/bunny.png";
+import capriSongs from "../../pictures/capriSongs.png";
 import grace from "../../pictures/grace.png";
-import digitalBay from "../../pictures/digitalBay.webp";
+import digitalBay from "../../pictures/digitalBay.png";
 
 export const musicPostPreviewList = [
   {
