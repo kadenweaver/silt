@@ -1,5 +1,4 @@
-import ghost from "../../pictures/ghost.jpeg";
-require("../../pictures/ghost.jpeg")
+import ghost from "../../pictures/ghost.png";
 
 
 export const moviePostPreviewList = [

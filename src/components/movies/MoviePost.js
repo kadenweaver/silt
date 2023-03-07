@@ -5,7 +5,7 @@ const MusicPost = props => {
   const { postTitle, postDate, postText, postImage } = props;
 
   return (
-    <Flex mt={['22%', '5%']} flexDir="column">
+    <Flex mt={['25%', '5%']}flexDir="column">
       <Flex flexDir="column" mb="9%">
         <Heading>{postTitle}</Heading>
         <Text fontSize="90%">{postDate}</Text>

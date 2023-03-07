@@ -4,11 +4,11 @@ import {
   Icon,
   Link as ChakraLink,
   VStack,
-  ModalOverlay,
-  Modal,
-  ModalContent,
+  DrawerOverlay,
+  Drawer,
+  DrawerContent,
   Text,
-  ModalCloseButton,
+  DrawerCloseButton,
 } from "@chakra-ui/react";
 import { BiMenu } from "react-icons/bi";
 
@@ -41,15 +41,17 @@ export const SmallAppNav = props => {
         />
       )}
       {navDrawerOpen && (
-        <Modal
+        <Drawer
           isOpen={navDrawerOpen}
           onClose={closeNavDrawer}
           closeOnOverlayClick
+          size='full'
+          placement="bottom"
         >
-          <ModalOverlay />
-          <ModalContent h="80vh" w="100%" bg="none">
-            <ModalCloseButton left={0} top={-8} size='lg' color='white' fontWeight='extrabold'/>
-            <VStack>
+          <DrawerOverlay />
+          <DrawerContent h='100%'>
+            <DrawerCloseButton size='lg' color='white' fontWeight='extrabold' left={2} top={2}/>
+            <VStack bg="#3c4759" h='100%' pt='30%' >
               {buttonTitles.map((x, index) => (
                 <ChakraLink
                   as={Link}
@@ -58,6 +60,7 @@ export const SmallAppNav = props => {
                     state: { prevPath: match },
                   }}
                   w="fit-content"
+                  key={index}
                 >
                   <Text fontSize="3em" color={index === activeIndex ? 'black' : 'white' } onClick={closeNavDrawer}>
                     {x}
@@ -65,8 +68,8 @@ export const SmallAppNav = props => {
                 </ChakraLink>
               ))}
             </VStack>
-          </ModalContent>
-        </Modal>
+          </DrawerContent>
+        </Drawer>
       )}
     </>
   );

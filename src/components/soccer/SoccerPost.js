@@ -3,7 +3,7 @@ import { Heading, Text, VStack, Flex, chakra } from "@chakra-ui/react";
 import "../../App.css";
 
 export const SoccerPost = props => (
-  <Flex mt={['22%', '5%']}flexDir="column">
+  <Flex mt={['25%', '5%']} flexDir="column">
     <Flex flexDir="column" mb="9%">
       <Heading>{props.postTitle}</Heading>
       <Text fontSize="90%">{props.postDate}</Text>
