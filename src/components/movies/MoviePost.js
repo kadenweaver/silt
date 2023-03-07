@@ -15,7 +15,7 @@ const MusicPost = props => {
       </chakra.div>
 
       <VStack spacing={['5%', '3%']} alignItems="flex-start">
-        {postText && postText.map((x,index) => <Text fontFamily='Cormorant Garamond' fontSize='82%' key={`text-${index}`}>{x}</Text>)}
+        {postText && postText.map((x,index) => <Text fontFamily='Cormorant Garamond' fontSize={['93%', '82%']} key={`text-${index}`}>{x}</Text>)}
       </VStack>
     </Flex>
   );

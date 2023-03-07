@@ -28,7 +28,7 @@ const MusicPost = props => {
           postText.map((x, index) => (
             <Text
               fontFamily="Cormorant Garamond"
-              fontSize="82%"
+              fontSize={['93%', '82%']}
               key={`text-${index}`}
             >
               {x}

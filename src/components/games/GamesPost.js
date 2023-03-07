@@ -17,7 +17,7 @@ export const GamesPost = props => (
     <VStack spacing={['5%', '3%']} alignItems="flex-start">
       {props.postText &&
         props.postText.map((x, ix) => (
-          <Text fontFamily='Cormorant Garamond' fontSize='82%' key={`text-${ix}`}>{x}</Text>
+          <Text fontFamily='Cormorant Garamond' fontSize={['93%', '82%']} key={`text-${ix}`}>{x}</Text>
         ))}
     </VStack>
   </Flex>
