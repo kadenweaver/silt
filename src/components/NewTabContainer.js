@@ -24,8 +24,9 @@ const NewTabContainer = props => {
       </Heading>
 
       {postTabPreviewsList &&
-        postTabPreviewsList.map(previewContent => (
+        postTabPreviewsList.map((previewContent, index )=> (
           <PostPreview
+            key={`post-preview_${index}`}
             postType={previewContent.postType}
             previewKey={previewContent.previewKey}
             previewTitle={previewContent.previewTitle}

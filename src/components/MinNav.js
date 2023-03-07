@@ -55,14 +55,14 @@ export const MinNav = props => {
       {!navDrawerOpen && (
         <>
           {pathIcons.map((icon, index) => 
-            <MiniButton icon={icon} active={index === activeIndex} />
+            <MiniButton icon={icon} active={index === activeIndex} key={`min-button_${index}`}/>
           )}
         </>
       )}
       {navDrawerOpen && (
         <>
           {pathList.map((path, index) => (
-            <ChakraLink as={Link} to={{pathname: `/${path}`, state: {prevPath: match}}} w="100%">
+            <ChakraLink as={Link} to={{pathname: `/${path}`, state: {prevPath: match}}} w="100%" key={`drawer-button_${index}`}>
               <DrawerButton
                 buttonTitle={buttonTitles.at(index)}
                 active={index === activeIndex}

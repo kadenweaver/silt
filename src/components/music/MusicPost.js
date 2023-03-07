@@ -5,10 +5,10 @@ const MusicPost = props => {
   const { postTitle, postDate, playerLink, postText, postBonusVideo } = props;
 
   return (
-    <Flex mt={['21%', '5%']} flexDir="column">
+    <Flex mt={["21%", "5%"]} flexDir="column">
       <Flex flexDir="column" mb="9%">
-        <Heading fontSize="40">{postTitle}</Heading>
-        <Text fontSize="25px">{postDate}</Text>
+        <Heading>{postTitle}</Heading>
+        <Text fontSize="90%">{postDate}</Text>
       </Flex>
       <Flex w="100%" mt="2%" justifyContent="center" mb="11%" display="flex">
         <iframe
@@ -16,17 +16,24 @@ const MusicPost = props => {
           title={postTitle}
           width="300"
           height="380"
-          frameBorder="0"
-          allowTransparency="true"
           allow="encrypted-media"
         ></iframe>
       </Flex>
       <VStack
-        spacing="3%"
+        spacing={["5%", "3%"]}
         alignItems="flex-start"
         mb={postBonusVideo ? "11%" : undefined}
       >
-        {postText && postText.map(x => <p className="post-text">{x}</p>)}
+        {postText &&
+          postText.map((x, index) => (
+            <Text
+              fontFamily="Cormorant Garamond"
+              fontSize="82%"
+              key={`text-${index}`}
+            >
+              {x}
+            </Text>
+          ))}
       </VStack>
       {postBonusVideo && (
         <Flex w="100%" justifyContent="center">
@@ -35,14 +42,12 @@ const MusicPost = props => {
             height="450"
             src={postBonusVideo}
             title={"YouTube"}
-            frameborder="0"
             allow="accelerometer; 
                             autoplay; 
                             clipboard-write; 
                             encrypted-media; 
                             gyroscope; 
                             picture-in-picture"
-            allowfullscreen={true}
           ></iframe>
         </Flex>
       )}

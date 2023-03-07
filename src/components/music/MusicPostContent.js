@@ -112,7 +112,7 @@ export const musicPostContentList = [
       "Staples Released An Album Of Mellow Sampled Raps, Finally Living Up To His Potential",
     postDate: "Aug 20, 2021",
     playerLink:
-      "https://open.spotify.com/embed/playlist/2gymXGRl1CLdN1mAdyZtIE?si=lbiG8wJ3TAuGskheN2jQng&dl",
+      "https://open.spotify.com/embed/track/0sYeIOwBjpkrfLmi1DTO0P?si=yEq0f7L5ToeM2B4-CezDyw",
     postText: [
       'Vince Staples is a rare example of an artist that has plenty of powerful singles without having released a solid album. I first started listening to him with the track "Norf Norf" from his debut album, Summertime \'06. The California native introduced himself there with a unique identity, something he maintained through his subsequent works. Memorable opening lines like "Bitch, you thirsty? Please, grab a Sprite" and clear allusions to his adolescence in Long Beach would stick from there on out.',
       'These elements hinted at a rapper with great potential:  someone who has a story to tell, but doesn\'t take themselves seriously enough to shy away from the corny side of rap. What followed was a couple of club singles and not much else. Staples released "Big Fish" and "FUN!", two colossal hits that still let him down in terms of overall acclaim. I watched Vince open for Tyler, the Creator in February of 2018, soon thereafter the rapper started a pity party GoFundMe to address criticisms of his live performances. Other tracks like "745" and "Yeah Right" weren\'t enough to supplement his hits, and his delivery in concert was lackluster at best.',
@@ -165,10 +165,9 @@ export const musicPostContentList = [
     postType: 'music',
     postTitle: "Ives Packs an Album Full of Unabashedly Unique Pop",
     postDate: "Jun 16, 2022",
-    playerLink:
-      "https://open.spotify.com/embed/playlist/0Xr8FKd7WGtUcZqdwMRgpz?utm_source=generator&theme=0",
+    playerLink: "https://open.spotify.com/embed/track/4FHJqPdhIHhHn1JfcdwQOL?si=OXxMC6vxSdiDzkN85E-xnw",
     postText: [
-      "The above playlist is meant to celebrate the wonderful frontrunners from Grace Ives' new album, and the music videos that accompany them. Hopefully soon we get a music video for Burn Bridges :)",
+      "This post is meant to celebrate the wonderful frontrunners from Grace Ives' new album, and the music videos that accompany them. Hopefully soon we get a music video for Burn Bridges :)",
       "My first Ives encounter was on her freshman effort, Icing on the Cake, which undoubtedly holds up, but seemed as though it could be a one off dance hit from a budding artist. The richness of her sound has expanded meteorically-- on Janky Star she mastered not only the driving force of the dance notes, but also the aura of the spaces in between.",
       "On a record where it's clear she collects inspiration from many different sources-- her voice cutting with Lana-like silkiness, lighthearted indie pop production rem·i·nis·cent of Passion Pit, LCD, The New Pornographers --she also brings a defined personality and offbeat swagger that demand appreciation.",
       "Her music videos sometimes don't have a quality option beyond 480p. I think that sums it up pretty well.",
