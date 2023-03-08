@@ -4,7 +4,7 @@ import { Flex, Button, Icon } from "@chakra-ui/react";
 import { BiLeftArrowCircle } from "react-icons/bi";
 
 const BackButton = () => {
-  const {goBack} = useHistory()
+  const {goBack, push} = useHistory()
   const location = useLocation()
   const path = location?.pathname
   const id = path?.split('/')?.slice(1)?.at(1)
@@ -15,6 +15,8 @@ const BackButton = () => {
   const pathIndex = backDefined && pathList.findIndex(x => prev.includes(x))
   const label = pathIndex !== undefined && pathIndex >= 0 ? pathList.at(pathIndex).charAt(0).toUpperCase() + pathList.at(pathIndex).slice(1) : 'Home'
 
+  const buttonText = pathIndex >= -1 ? `Back to ${label}` : `Go to ${label}`
+  const buttonFunc = () => pathIndex >= -1 ? goBack() : push('/') 
   return (
     id  &&
       <Flex
@@ -27,7 +29,7 @@ const BackButton = () => {
         justifyContent="flex-end"
       >
         <Button
-          onClick={goBack}
+          onClick={buttonFunc}
           width="fit-content"
           textAlign="center"
           p="2"
@@ -63,7 +65,7 @@ const BackButton = () => {
             },
           }}
         >
-          {`Back to ${label}`}
+          {buttonText}
         </Button>
     </Flex>
   );

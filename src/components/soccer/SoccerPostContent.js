@@ -37,7 +37,7 @@ export const soccerPostContentList =  [
         postText: 
         [
             "What better way to troll Chelsea fans than to sub Kepa Arrizabalaga on for a last minute \"penalties specialist\" appearance in the UEFA Super Cup. Somehow it worked: the Spanish keeper blocked spot kicks from Aissa Mandi and Raul Albiol, almost stopping a third with a unique strategy that involved diving to his right all but once.", 
-            "Hakim Ziyech's early goal wasn't enough to secure a victory for Chelsea. The Algerian struck in the first half, arching the ball over the keeper into the opposite side of the net. Kai Havertz provided the assist after being played in brilliantly on the left side by an inspired Marcos Alonso pass.  Gerard Moreno equalized 30 minutes into the second half on a sharply worked passing play by the Spanish side. Moreno found Boulaye Dia near the goal line and made the most out of the return pass from his Senegalese teammate.",
+            "Hakim Ziyech's early goal wasn't enough to secure a victory for Chelsea. The Moroccan struck in the first half, arching the ball over the keeper into the opposite side of the net. Kai Havertz provided the assist after being played in brilliantly on the left side by an inspired Marcos Alonso pass.  Gerard Moreno equalized 30 minutes into the second half on a sharply worked passing play by the Spanish side. Moreno found Boulaye Dia near the goal line and made the most out of the return pass from his Senegalese teammate.",
             "What proceeded was a bizarre penalty shootout-- it certaintly started that way with Kepa's substitution late in extra time. Chelsea shot first, but fell behind immediately with a weak effort from Havertz of all players. Marcos Alonso slipped at the spot during his shot in proper John Terry nightmare fashion, and sudden death saw Toni Rudiger step up and dispatch an emphatic finish."
         ]
     },
@@ -56,7 +56,7 @@ export const soccerPostContentList =  [
     },
     { 
         postType: 'soccer',
-        postTitle: 'Chelsea Comback Thwarted In Late Stages By Clinical Madrid', 
+        postTitle: 'Chelsea Comeback Thwarted In Late Stages By Clinical Madrid', 
         postDate: 'Apr 13, 2022', 
         textHeader: 'Despite An Incredible Second Leg Victory, Chelsea CL Campaign Ended By Madrid Goal In Extra Time', 
         postImage: Kai, 

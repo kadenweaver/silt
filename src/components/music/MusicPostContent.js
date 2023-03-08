@@ -1,3 +1,5 @@
+/* cSpell:enable */
+
 import perfume from "../../pictures/jasonundressed.png";
 import cartier from "../../pictures/cartierGod.png";
 import vinceStaples from "../../pictures/vinceStaples.png";
@@ -7,6 +9,7 @@ import bunny from "../../pictures/bunny.png";
 import capriSongs from "../../pictures/capriSongs.png";
 import grace from "../../pictures/grace.png";
 import digitalBay from "../../pictures/digitalBay.png";
+
 
 export const musicPostPreviewList = [
   {

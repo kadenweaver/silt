@@ -93,13 +93,14 @@
     margin-left: auto;
 }
 
+
 .background-div {
   background-color: #fffef5;
   min-height: 100vh;
   width: 100%;
   font-size: calc(10px + 2vmin);
   color: white;
-  overflow: hidden;
+
 }
 
 .sidebar {
