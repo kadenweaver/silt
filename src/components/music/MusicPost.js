@@ -1,21 +1,34 @@
-import { Flex, VStack, Text, Heading } from "@chakra-ui/react";
+import {
+  Flex,
+  VStack,
+  Text,
+  Heading,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import "../../App.css";
+import { PostText } from "../PostText";
 
 const MusicPost = props => {
   const { postTitle, postDate, playerLink, postText, postBonusVideo } = props;
-
+  const headerColor = useColorModeValue('black', 'orange');
   return (
-    <Flex mt={['25%', '5%']} flexDir="column">
+    <Flex mt={["25%", "5%"]} flexDir="column">
       <Flex flexDir="column" mb="9%">
-        <Heading>{postTitle}</Heading>
-        <Text fontSize="90%">{postDate}</Text>
+        <Heading color={headerColor}>{postTitle}</Heading>
+        <Text fontSize="90%" color={headerColor}>{postDate}</Text>
       </Flex>
-      <Flex w="100%" mt="2%" justifyContent="center" mb="11%" display="flex">
+      <Flex
+        w="100%"
+        mt="2%"
+        justifyContent="center"
+        mb="11%"
+        display="flex"
+      >
         <iframe
           src={playerLink}
           title={postTitle}
           width="300"
-          height="380"
+          height="352"
           allow="encrypted-media"
         ></iframe>
       </Flex>
@@ -26,13 +39,7 @@ const MusicPost = props => {
       >
         {postText &&
           postText.map((x, index) => (
-            <Text
-              fontFamily="Cormorant Garamond"
-              fontSize={['96%', '82%']}
-              key={`text-${index}`}
-            >
-              {x}
-            </Text>
+            <PostText key={`text-${index}`} content={x} />
           ))}
       </VStack>
       {postBonusVideo && (

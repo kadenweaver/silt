@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, useHistory } from "react-router-dom";
-import { Flex, Button, Icon } from "@chakra-ui/react";
+import { Flex, Button, Icon, useColorModeValue } from "@chakra-ui/react";
 import { BiLeftArrowCircle } from "react-icons/bi";
 
 const BackButton = () => {
@@ -17,6 +17,13 @@ const BackButton = () => {
 
   const buttonText = pathIndex >= -1 ? `Back to ${label}` : `Go to ${label}`
   const buttonFunc = () => pathIndex >= -1 ? goBack() : push('/') 
+
+  const buttonTxtColor = useColorModeValue('#3c4759', 'orange')
+  const buttonBgColor = useColorModeValue('#fffef5', '#1f2428')
+  const buttonHoverBgColor = useColorModeValue('#dae4ed', '#21272b')
+  const buttonHoverTxtColor = useColorModeValue('white', '#1f2428')
+  const buttonTColor = useColorModeValue('#3c4759', '#dae4ed')
+
   return (
     id  &&
       <Flex
@@ -34,8 +41,8 @@ const BackButton = () => {
           textAlign="center"
           p="2"
           h="9"
-          backgroundColor="#fffef5"
-          color="#3c4759"
+          backgroundColor={buttonBgColor}
+          color={buttonTxtColor}
           position="fixed"
           ml="62vw"
           borderRadius="3px"
@@ -44,7 +51,7 @@ const BackButton = () => {
           leftIcon={<Icon as={BiLeftArrowCircle} />}
           _after={{
             content: `""`,
-            backgroundColor: "#dae4ed",
+            backgroundColor: buttonHoverBgColor,
             width: "100%",
             zIndex: "-1",
             position: "absolute",
@@ -54,14 +61,14 @@ const BackButton = () => {
             transition: "0.2s",
           }}
           _hover={{
-            color: "white",
+            color: buttonHoverTxtColor,
             border: "none",
             boxShadow: "0px 1px 5px 1px gray",
             _after: {
               borderRadius: "3px",
               top: "0px",
               left: "0px",
-              backgroundColor: "#3c4759",
+              backgroundColor: buttonTColor,
             },
           }}
         >

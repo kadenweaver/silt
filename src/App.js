@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Container, chakra, useDisclosure } from "@chakra-ui/react";
+import { Container, chakra, useDisclosure, useColorMode, useColorModeValue } from "@chakra-ui/react";
 
 import PostTable from "./components/PostTable";
 import BackButton from "./components/BackButton";
@@ -15,18 +15,27 @@ const AppUI = () => {
     onOpen: openNavDrawer,
   } = useDisclosure();
 
+  const { toggleColorMode, colorMode } = useColorMode()
+  const bgDiv = useColorModeValue('#fffef5', '#3c4759')
   const smallAppMode = window.innerWidth < 500;
 
   return (
     <Router>
       <div className="App">
-        <div className="background-div">
+        <chakra.div
+          bg={bgDiv}
+          minHeight='100vh'
+          w='100%'
+          fontSize='calc(10px + 2vmin)'
+          color='white'>
           <BackButton />
           {!smallAppMode && (
             <MinNav
               openNavDrawer={openNavDrawer}
               navDrawerOpen={navDrawerOpen}
               closeNavDrawer={closeNavDrawer}
+              toggleColorMode={toggleColorMode}
+              colorMode={colorMode}
             />
           )}
 
@@ -39,7 +48,7 @@ const AppUI = () => {
           )}
 
           <chakra.div
-            backgroundColor="#fffef5"
+            backgroundColor={bgDiv}
             mt="none"
             w="88%"
             ml="auto"
@@ -61,7 +70,7 @@ const AppUI = () => {
               </Switch>
             </Container>
           </chakra.div>
-        </div>
+        </chakra.div>
       </div>
     </Router>
   );

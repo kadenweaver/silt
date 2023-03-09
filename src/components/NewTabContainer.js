@@ -1,12 +1,14 @@
 import { useEffect } from 'react'
 import PostPreview from "./PostPreview";
-import { Heading } from "@chakra-ui/react";
+import { Heading, useColorModeValue } from "@chakra-ui/react";
 
 const NewTabContainer = props => {
   const { tabTitle, postTabPreviewsList } = props;
   useEffect(() => {
     window.scrollTo(0,0)
 }, [])
+const headingBgColor = useColorModeValue('#3c4759', '#1f2428')
+const headingTxtColor = useColorModeValue('white', 'orange')
   return (
     <>
       <Heading
@@ -15,10 +17,10 @@ const NewTabContainer = props => {
         mx="auto"
         mt="2.5%"
         mb="2%"
-        bg="#3c4759"
+        bg={headingBgColor}
         border="1px solid #3c4754"
         borderRadius="3px"
-        color="white"
+        color={headingTxtColor}
         fontSize={[45, 50]}
         fontWeight="light"
         textAlign='center'
