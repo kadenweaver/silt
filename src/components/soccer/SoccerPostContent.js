@@ -4,8 +4,10 @@ import FirstMatch from '../../pictures/FirstMatch.png';
 import Kai from '../../pictures/sadBoyKai.png'
 import managers from '../../pictures/managers.png'
 import graham from '../../pictures/chelseaGrahamPotter.png'
+import chelseaLogo from '../../pictures/blackAndBlue.png'
 
 export const soccerPreviewContentList =  [
+    { previewKey: 6, previewTitle: 'Potter Out and Lampard Returns', previewImage: chelseaLogo, previewImageOffset: '12', postType: 'soccer', postDate: 'Apr 18, 2023' },
     { previewKey: 5, previewTitle: 'Potter In Desperate Need of a Turnaround', previewImage: graham, previewImageOffset: '15', postType: 'soccer', postDate: 'Mar 01, 2023' },
     { previewKey: 4, previewTitle: 'Chelsea Switch Managers and Hope for Better Days', previewImage: managers, previewImageOffset: '45', postType: 'soccer', postDate: 'Sep 13, 2022' },
     { previewKey: 3, previewTitle: 'Tough Bout with Real Madrid Brings End to Champions League Defense', previewImage: Kai, previewImageOffset: '10', postType: 'soccer', postDate: 'Apr 13, 2022' },
@@ -99,7 +101,21 @@ export const soccerPostContentList =  [
             "Though Chelsea's recent transfer business has caused an almost complete refresh of the team, just the players brought in should constitute a very competitive side. Instead, the form of the team is at an extreme nadir. With just 3 wins in the past 16 matches, the last good memory Chelsea fans have is bossing AC Milan in both legs of the CL group stage to reserve our place in the round of 16. Since then, Potter has done little to justify his fee, and the Englishman will hope for a huge upturn in form from his players to reignite the season."
         ]
     },
-
+    { 
+        postType: 'soccer',
+        postTitle: 'Lampard Takes Over as Caretaker Manager After Potter Dismissal', 
+        postDate: 'Apr 26, 2023', 
+        textHeader: 'Graham Potter\'s Fingerprint Barely Applied At Chelsea Before Manager Carousel Continues', 
+        postImage: chelseaLogo, 
+        postText: 
+        [
+            "Hopefully the gloom and hopelessness of Chelsea comes across with this grave black flag. Times are dark for my beloved side: the manager has been replaced again, leading Didier Drogba to say he barely recognizes the club. If the savior of an entire country looks at your organization as unsalvageable, is there any hope for resurgence? The answer is a resounding yes with a flashy grin and probably a cheeky thumbs up. Super Frank is back, baby.", 
+            "Assistant manager Bruno Salter took charge for a single match, a predictable tie against a partial strength Liverpool. Lampard then returned as caretaker manager and lost his first four matches in charge, including two dreadful legs against Madrid in the Champions League quarterfinals and sorry performances in the league against Wolves and Brighton. A combination of personnel and system switches made the team incoherent, to say the least.", 
+            "But through the experimentation came some inkling of aspiration. In the second match against Real Madrid, the side finally seemed to be taking shape. Chelsea dazzled for the first time in a while with decisive, attacking football: service coming from wide to provide a barrage of shots. Alas, our disorganization in getting forward resulted in punishment for lack of pace and positioning in such a high defensive line. Without the venom to score any goals, we were easily swept aside by the spanish giants.", 
+            "Talk of a manager search has swirled since Potter was dismissed, with Julian Nagelsmann allegedly bowing out of a race that included the Sporting boss, Rúben Amorim and former Spurs man, Mauricio Pochettino. Chelsea's scramble to turn results around has even led to anxious reports that Pochettino has already signed a deal with the club.", 
+            "Whoever takes over will have an uphill battle: the squad needs to be trimmed before next season, and effective replacements will be a priority for attacking positions and players who are constantly injured. At the time of writing is Chelsea's next match against Brentford. C'mon, Chelsea!",
+        ]
+    },
 ]
 
 /*
