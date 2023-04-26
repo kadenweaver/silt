@@ -8,6 +8,6 @@ export const PostText = props => {
   const textColor = useColorModeValue("black", '#abbbcc');
   const {content} = props
   return (
-    <Text fontFamily="Cormorant Garamond" fontSize={["96%", "82%"]} color={textColor}>{content}</Text>
+    <Text fontFamily="Cormorant Garamond" fontSize={["96%", "86%"]} color={textColor}>{content}</Text>
   );
 };
