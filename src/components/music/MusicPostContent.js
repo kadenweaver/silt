@@ -10,10 +10,13 @@ import capriSongs from "../../pictures/capriSongs.png";
 import grace from "../../pictures/grace.png";
 import digitalBay from "../../pictures/digitalBay.png";
 
+// NB for dates: USE the format MMM dd, yyyy
+// this means use one of Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
+// always use two digits even if the day is a single digit. Mar 2 => Mar 02
 
 export const musicPostPreviewList = [
   {
-    postType: 'music',
+    postType: "music",
     postDate: "Jun 26, 2022",
     previewKey: 8,
     previewTitle: "Magdalena Bay is on Fire",
@@ -21,7 +24,7 @@ export const musicPostPreviewList = [
     previewImageOffset: "0",
   },
   {
-    postType: 'music',
+    postType: "music",
     postDate: "Jun 16, 2022",
     previewKey: 7,
     previewTitle: "She is Beauty, She is Grace",
@@ -29,7 +32,7 @@ export const musicPostPreviewList = [
     previewImageOffset: "40",
   },
   {
-    postType: 'music',
+    postType: "music",
     postDate: "Jan 29, 2022",
     previewKey: 6,
     previewTitle: "Saggi Moon, Pisce Veen, Capri Sun",
@@ -37,7 +40,7 @@ export const musicPostPreviewList = [
     previewImageOffset: "20",
   },
   {
-    postType: 'music',
+    postType: "music",
     postDate: "Aug 30, 2021",
     previewKey: 5,
     previewTitle:
@@ -46,7 +49,7 @@ export const musicPostPreviewList = [
     previewImageOffset: "0",
   },
   {
-    postType: 'music',
+    postType: "music",
     postDate: "Aug 23, 2021",
     previewKey: 4,
     previewTitle:
@@ -55,7 +58,7 @@ export const musicPostPreviewList = [
     previewImageOffset: "10",
   },
   {
-    postType: 'music',
+    postType: "music",
     postDate: "Aug 21, 2021",
     previewKey: 3,
     previewTitle: "John Glacier: Hopefully This Counts As A Snipe",
@@ -63,7 +66,7 @@ export const musicPostPreviewList = [
     previewImageOffset: "0",
   },
   {
-    postType: 'music',
+    postType: "music",
     postDate: "Aug 20, 2021",
     previewKey: 2,
     previewTitle: "Vince Staple's Self-Titled Album Is His Best Yet By Far",
@@ -71,7 +74,7 @@ export const musicPostPreviewList = [
     previewImageOffset: "10",
   },
   {
-    postType: 'music',
+    postType: "music",
     postDate: "Jun 24, 2021",
     previewKey: 1,
     previewTitle: "I Have No Idea Who Cartier God Is But...",
@@ -79,7 +82,7 @@ export const musicPostPreviewList = [
     previewImageOffset: "75",
   },
   {
-    postType: 'music',
+    postType: "music",
     postDate: "Jun 23, 2021",
     previewKey: 0,
     previewTitle: "This Perfume Genius Remix Made A Good Song Better",
@@ -90,7 +93,7 @@ export const musicPostPreviewList = [
 
 export const musicPostContentList = [
   {
-    postType: 'music',
+    postType: "music",
     postTitle:
       'Groove Out: Jim E Stack Remixes Perfume Genius\'s "Without You" To Funk EDM Perfection',
     postDate: "Jun 23, 2021",
@@ -100,7 +103,7 @@ export const musicPostContentList = [
     ],
   },
   {
-    postType: 'music',
+    postType: "music",
     postTitle: "Cartier God and Bladee: Who Invented Volume Throttling?",
     postDate: "Jun 24, 2021",
     playerLink:
@@ -110,7 +113,7 @@ export const musicPostContentList = [
     ],
   },
   {
-    postType: 'music',
+    postType: "music",
     postTitle:
       "Staples Released An Album Of Mellow Sampled Raps, Finally Living Up To His Potential",
     postDate: "Aug 20, 2021",
@@ -123,7 +126,7 @@ export const musicPostContentList = [
     ],
   },
   {
-    postType: 'music',
+    postType: "music",
     postTitle: "Up And Coming John Glacier Makes Bedroom Hop",
     postDate: "Aug 21, 2021",
     playerLink:
@@ -133,7 +136,7 @@ export const musicPostContentList = [
     ],
   },
   {
-    postType: 'music',
+    postType: "music",
     postTitle: "Lorde's Airy Pop Hits Hard At Times",
     postDate: "Aug 23, 2021",
     playerLink:
@@ -143,7 +146,7 @@ export const musicPostContentList = [
     ],
   },
   {
-    postType: 'music',
+    postType: "music",
     postTitle: "Polachek Releases Baby Sound Single With Accompanying Video",
     postDate: "Aug 30, 2021",
     playerLink:
@@ -154,7 +157,7 @@ export const musicPostContentList = [
     postBonusVideo: "https://www.youtube.com/embed/h_V2ccs_Urk",
   },
   {
-    postType: 'music',
+    postType: "music",
     postTitle:
       "Twigs Makes a Mixtape That Sparkles Without Reinventing Much of Anything",
     postDate: "Jan 29, 2022",
@@ -165,10 +168,11 @@ export const musicPostContentList = [
     ],
   },
   {
-    postType: 'music',
+    postType: "music",
     postTitle: "Ives Packs an Album Full of Unabashedly Unique Pop",
     postDate: "Jun 16, 2022",
-    playerLink: "https://open.spotify.com/embed/track/4FHJqPdhIHhHn1JfcdwQOL?si=OXxMC6vxSdiDzkN85E-xnw",
+    playerLink:
+      "https://open.spotify.com/embed/track/4FHJqPdhIHhHn1JfcdwQOL?si=OXxMC6vxSdiDzkN85E-xnw",
     postText: [
       "This post is meant to celebrate the wonderful frontrunners from Grace Ives' new album, and the music videos that accompany them. Hopefully soon we get a music video for Burn Bridges :)",
       "My first Ives encounter was on her freshman effort, Icing on the Cake, which undoubtedly holds up, but seemed as though it could be a one off dance hit from a budding artist. The richness of her sound has expanded meteorically-- on Janky Star she mastered not only the driving force of the dance notes, but also the aura of the spaces in between.",
@@ -178,7 +182,7 @@ export const musicPostContentList = [
     postBonusVideo: "https://www.youtube.com/embed/Bu4FuCWZiB4",
   },
   {
-    postType: 'music',
+    postType: "music",
     postTitle: "Duo Mica and Matthew Synthesize New Age Pop",
     postDate: "Jun 26, 2022",
     playerLink:

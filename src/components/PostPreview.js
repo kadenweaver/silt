@@ -17,10 +17,10 @@ const PostPreview = props => {
     previewKey,
   } = props;
   const match = useRouteMatch();
-  const previewBgColor = useColorModeValue('#f2f9ff', '#1f2428');
-  const previewTxtColor = useColorModeValue('#3c4759', 'orange');
-  const previewHoverBgColor = useColorModeValue('#2f3847', '#3c4759');
-  const previewHoverTxtColor = useColorModeValue('white', 'white');
+  const previewBgColor = useColorModeValue("#f2f9ff", "#1f2428");
+  const previewTxtColor = useColorModeValue("#3c4759", "orange");
+  const previewHoverBgColor = useColorModeValue("#2f3847", "#3c4759");
+  const previewHoverTxtColor = useColorModeValue("white", "white");
 
   return (
     <ChakraLink
@@ -32,7 +32,7 @@ const PostPreview = props => {
     >
       <Flex
         w="100%"
-        h="90px"
+        h={["110px", "90px"]}
         borderRadius="5px"
         flexDir="row"
         border="2px solid #3c4759"
