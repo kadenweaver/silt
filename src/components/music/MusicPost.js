@@ -10,26 +10,23 @@ import { PostText } from "../PostText";
 
 const MusicPost = props => {
   const { postTitle, postDate, playerLink, postText, postBonusVideo } = props;
-  const headerColor = useColorModeValue('black', 'orange');
+  const headerColor = useColorModeValue("black", "orange");
   return (
     <Flex mt={["25%", "5%"]} flexDir="column">
       <Flex flexDir="column" mb="9%">
         <Heading color={headerColor}>{postTitle}</Heading>
-        <Text fontSize="90%" color={headerColor}>{postDate}</Text>
+        <Text fontSize="90%" color={headerColor}>
+          {postDate}
+        </Text>
       </Flex>
-      <Flex
-        w="100%"
-        mt="2%"
-        justifyContent="center"
-        mb="11%"
-        display="flex"
-      >
+      <Flex w="100%" mt="2%" justifyContent="center" mb="11%" display="flex">
         <iframe
           src={playerLink}
           title={postTitle}
           width="300"
           height="352"
           allow="encrypted-media"
+          style={{ borderRadius: "5%" }}
         ></iframe>
       </Flex>
       <VStack
